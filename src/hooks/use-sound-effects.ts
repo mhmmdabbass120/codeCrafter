@@ -71,7 +71,7 @@ const SOUND_CONFIGS: Record<SoundEffect, SoundConfig[]> = {
 
 export const useSoundEffects = () => {
   const audioContextRef = useRef<AudioContext | null>(null);
-  const enabledRef = useRef(true);
+  const enabledRef = useRef(false); // Disabled by default to remove peeping sounds
 
   const getAudioContext = useCallback(() => {
     if (!audioContextRef.current) {

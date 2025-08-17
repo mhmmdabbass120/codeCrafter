@@ -251,7 +251,11 @@ const Index = () => {
       default:
         return (
           <>
-            <Hero user={user} />
+            <Hero 
+              user={user} 
+              onStartLearning={() => handleViewChange("assessment")}
+              onTryDemo={() => handleViewChange("demo")}
+            />
             
             {/* Quick Actions */}
             <section className="py-20 px-6 bg-muted/20">
